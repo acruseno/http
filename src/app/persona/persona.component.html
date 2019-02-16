@@ -28,15 +28,15 @@
     <div class="col-6">
       <div class="form-group">
         <label for="txtNombre">Nombre</label>
-        <input type="text" name="" id="txtNombre" class="form-control" placeholder="Juanito">
+        <input [(ngModel)]="agregarPersonaRegistro.nombre" type="text" name="" id="txtNombre" class="form-control" placeholder="Juanito">
       </div>
       <div class="form-group">
         <label for="txtApellido">Apellido</label>
-        <input type="text" name="" id="txtApellido" class="form-control" placeholder="De la Cruz">
+        <input [(ngModel)]="agregarPersonaRegistro.apellido" type="text" name="" id="txtApellido" class="form-control" placeholder="De la Cruz">
       </div>
       <div class="form-group">
         <label for="txtEdad">Edad</label>
-        <input type="text" name="" id="txtEdad" class="form-control" placeholder="31">
+        <input [(ngModel)]="agregarPersonaRegistro.edad" type="text" name="" id="txtEdad" class="form-control" placeholder="31">
       </div>
       <button (click)="agregarPersona()" class="btn btn-success">Agregar Persona</button>
     </div>

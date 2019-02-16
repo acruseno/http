@@ -7,13 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonaComponent implements OnInit {
 
+  agregarPersonaRegistro: any = {nombre: "", apellido: "", edad: ""};
+  personas: any;
   constructor() { }
 
   ngOnInit() {
   }
 
   agregarPersona() {
-    //to do here
+    console.log("se lanzo el evento agregar persona");
+  }
+
+  eliminarPersona(persona) {
+    console.log("se lanzo el evento eliminar persona");
   }
 
 }
