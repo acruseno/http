@@ -12,4 +12,8 @@ export class PersonaComponent implements OnInit {
   ngOnInit() {
   }
 
+  agregarPersona() {
+    //to do here
+  }
+
 }
