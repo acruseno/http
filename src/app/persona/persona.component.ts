@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonaService } from '../servicios/persona.service';
 
 @Component({
   selector: 'app-persona',
@@ -9,7 +10,9 @@ export class PersonaComponent implements OnInit {
 
   agregarPersonaRegistro: any = {nombre: "", apellido: "", edad: ""};
   personas: any;
-  constructor() { }
+  constructor(private personaService: PersonaService) {
+    
+   }
 
   ngOnInit() {
   }
@@ -22,4 +25,14 @@ export class PersonaComponent implements OnInit {
     console.log("se lanzo el evento eliminar persona");
   }
 
+  obtenerPersonas() {
+    this.personaService.obtenerPersonas().subscribe(
+      res => {
+        this.personas = res.personas;
+      },
+      error => {
+        console.log(JSON.stringify(error))
+      }
+    );
+  }
 }
